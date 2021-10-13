@@ -1,4 +1,15 @@
-class ListItems extends React.Components {
+class ListItems extends React.Component {
+    state = {
+        items: ["jabłko", "śliwka", "gruszka"],
+    }
+
+    render() {
+        return (
+            <ul>
+                {this.state.items.map(item => <li key={item}>{`Owoc ${item}`}</li>)}
+            </ul>
+        )
+    }
 
 }
 
